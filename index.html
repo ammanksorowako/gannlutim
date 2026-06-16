@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DRAF SLIDE PRESENTASI GANN</title>
+    <style>
+        /* Skema Warna: Putih & Hijau (Tegas namun Lembut) */
+        :root {
+            --primary-green: #2E7D32; /* Tegas */
+            --secondary-green: #4CAF50; /* Aksen */
+            --light-green: #E8F5E9; /* Lembut */
+            --bg-color: #F4F9F4;
+            --text-dark: #333333;
+            --text-light: #666666;
+            --white: #FFFFFF;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-dark);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: var(--white);
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+            border-top: 6px solid var(--primary-green);
+        }
+
+        header {
+            background-color: var(--light-green);
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            color: var(--primary-green);
+            font-size: 28px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Tab Navigation */
+        .tabs {
+            display: flex;
+            flex-wrap: wrap;
+            background-color: var(--white);
+            border-bottom: 2px solid var(--light-green);
+        }
+
+        .tab-btn {
+            flex: 1;
+            padding: 15px 10px;
+            border: none;
+            background: none;
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--text-light);
+            transition: all 0.3s ease;
+            text-align: center;
+            border-bottom: 3px solid transparent;
+        }
+
+        .tab-btn:hover {
+            background-color: var(--bg-color);
+            color: var(--primary-green);
+        }
+
+        .tab-btn.active {
+            color: var(--primary-green);
+            border-bottom-color: var(--secondary-green);
+            background-color: var(--white);
+        }
+
+        /* Tab Content */
+        .tab-content {
+            display: none;
+            padding: 30px;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h2 {
+            color: var(--primary-green);
+            border-bottom: 2px solid var(--light-green);
+            padding-bottom: 10px;
+            margin-top: 0;
+            font-size: 22px;
+        }
+
+        h3 {
+            color: var(--secondary-green);
+            margin-top: 25px;
+            font-size: 18px;
+        }
+
+        ul, ol {
+            padding-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .quote {
+            font-style: italic;
+            color: var(--primary-green);
+            font-weight: bold;
+            text-align: center;
+            margin: 25px 0;
+            padding: 20px;
+            background: var(--light-green);
+            border-radius: 8px;
+            border-left: 4px solid var(--primary-green);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--white);
+            border: 1px solid var(--light-green);
+            border-left: 4px solid var(--secondary-green);
+            padding: 15px 20px;
+            border-radius: 6px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+        }
+
+        /* Table Styles for Organigram */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            margin-bottom: 25px;
+        }
+
+        th, td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #eee;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--light-green);
+            color: var(--primary-green);
+            font-weight: 600;
+        }
+
+        tr:hover {
+            background-color: var(--bg-color);
+        }
+
+        td strong {
+            color: var(--text-dark);
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .tab-btn { flex-basis: 100%; text-align: left; padding-left: 20px; }
+            header h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>DRAF SLIDE PRESENTASI GANN [cite: 1]</h1>
+        </header>
+
+        <div class="tabs">
+            <button class="tab-btn active" onclick="openTab(event, 'latar-belakang')">Latar Belakang</button>
+            <button class="tab-btn" onclick="openTab(event, 'visi-misi')">Visi & Misi</button>
+            <button class="tab-btn" onclick="openTab(event, 'struktur')">Struktur Organisasi</button>
+            <button class="tab-btn" onclick="openTab(event, 'bidang')">Daftar Bidang</button>
+            <button class="tab-btn" onclick="openTab(event, 'program')">Program & Strategi</button>
+        </div>
+
+        <div id="latar-belakang" class="tab-content active">
+            <h2>Latar Belakang [cite: 2]</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Data Fakta</h3>
+                    <p>1 dari 9 pemuda Indonesia pernah coba narkoba [BNN 2025] [cite: 3]</p>
+                </div>
+                <div class="card">
+                    <h3>Ancaman</h3>
+                    <p>Narkoba merusak masa depan, prestasi, kesehatan mental [cite: 4]</p>
+                </div>
+                <div class="card">
+                    <h3>Solusi</h3>
+                    <p>Peran aktif pemuda = Garda terdepan pencegahan [cite: 5]</p>
+                </div>
+            </div>
+            <div class="quote">
+                "Narkoba nomor 1, musuh kita bersama" - BNN [cite: 6]
+            </div>
+        </div>
+
+        <div id="visi-misi" class="tab-content">
+            <h2>VISI & MISI GANN [cite: 7]</h2>
+            <div class="card" style="margin-bottom: 20px;">
+                <h3>Visi [cite: 8]</h3>
+                <p>Mewujudkan generasi muda Indonesia yang sehat, berprestasi, dan bebas narkoba [cite: 9]</p>
+            </div>
+            
+            <div class="card">
+                <h3>Misi [cite: 10]</h3>
+                <ol>
+                    <li>Edukasi bahaya narkoba ke sekolah/kampus [cite: 11]</li>
+                    <li>Kampanye kreatif konten, lomba, talkshow [cite: 12]</li>
+                    <li>Jadi relawan BNN untuk rehabilitasi [cite: 13]</li>
+                </ol>
+            </div>
+        </div>
+
+        <div id="struktur" class="tab-content">
+            <h2>STRUKTUR ORGANISASI GANN [cite: 14]</h2>
+            
+            <div class="grid">
+                <div class="card">
+                    <h3>PEMBINA [cite: 15]</h3>
+                    <ul>
+                        <li>BUPATI LUWU TIMUR [cite: 16]</li>
+                        <li>PABUNG LUWU TIMUR [cite: 17]</li>
+                        <li>POLRES LUWU TIMUR [cite: 18]</li>
+                        <li>KEJARI LUWU TIMUR [cite: 19]</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>PENASEHAT [cite: 20]</h3>
+                    <ul>
+                        <li>Drs. H. ARDIAS BARAН. М. М [cite: 21]</li>
+                        <li>M. RAYA TAHIR GANI [cite: 22]</li>
+                        <li>H. YAN HERMANSYAH [cite: 23]</li>
+                        <li>HJ. ATHIRA [cite: 24]</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3>PENGURUS INTI</h3>
+            <table>
+                <tbody>
+                    <tr><td><strong>KETUA</strong></td><td>: ANDI YULIARNI.SE [cite: 25]</td></tr>
+                    <tr><td><strong>WAKIL</strong></td><td>: Drs.ZAENAL ABIDIN DJAMAL [cite: 25]</td></tr>
+                    <tr><td><strong>SEKERTARIS</strong></td><td>: LINA BATE BANDERA.SM [cite: 25]</td></tr>
+                    <tr><td><strong>BENDAHARA</strong></td><td>: HASLINDA.AMd.T [cite: 25]</td></tr>
+                    <tr><td><strong>ORGANISASI & KADERISASI</strong></td><td>: ABD.RASYID [cite: 25]</td></tr>
+                </tbody>
+            </table>
+
+            <h3>SRIKANDI</h3>
+            <table>
+                <tbody>
+                    <tr><td><strong>KETUA SRIKANDI</strong> [cite: 28]</td><td>: YENNI PABUNTANG [cite: 30]</td></tr>
+                    <tr><td><strong>WAKIL</strong> [cite: 29]</td><td>: MARHAENI [cite: 31]</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div id="bidang" class="tab-content">
+            <h2>BIDANG BIDANG [cite: 26]</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>NAMA BIDANG</th>
+                        <th>PENANGGUNG JAWAB</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>BIDANG HUKUM & HAM [cite: 27]</td><td>HAJAR ASWAD [cite: 27]</td></tr>
+                    <tr><td>BIDANG PENYULUHAN [cite: 27]</td><td>MUH.RIZAL DARMAYANTO [cite: 27]</td></tr>
+                    <tr><td>BIDANG HUMAS [cite: 27]</td><td>HAMKA BOОВ [cite: 27]</td></tr>
+                    <tr><td>BIDANG MEDIA [cite: 27]</td><td>MUNAR [cite: 27]</td></tr>
+                    <tr><td>BIDANG SATGAS [cite: 27]</td><td>HAMZAH S,AN [cite: 27]</td></tr>
+                    <tr><td>BIDANG TIM KHUSUS [cite: 27]</td><td>HIDAYAT.ST [cite: 27]</td></tr>
+                    <tr><td>BIDANG INTELIGEN & INVESTIGASI [cite: 27]</td><td>CALVIN LANTIUNGA [cite: 27]</td></tr>
+                    <tr><td>BIDANG AGAMA & KEROHANIAN [cite: 27]</td><td>ABU ZIDNA [cite: 27]</td></tr>
+                    <tr><td>BIDANG KESENIAN, KEBUDAYAAN [cite: 27]</td><td>IDA AYU MADE WAHYUNI [cite: 27]</td></tr>
+                    <tr><td>BIDANG OLAH RAGA [cite: 27]</td><td>LAODE BAYAMA [cite: 27]</td></tr>
+                    <tr><td>BIDANG REHABILITASI [cite: 27]</td><td>HASNI [cite: 27]</td></tr>
+                    <tr><td>BIDANG SARANA & PRASARANA [cite: 27]</td><td>MISDIARDI [cite: 27]</td></tr>
+                    <tr><td>BIDANG KEPEMUDAAN [cite: 27]</td><td>SYUKUR [cite: 27]</td></tr>
+                    <tr><td>BIDANG PENDIDIKAN [cite: 27]</td><td>ANDI HILYATUL AULIA.SPd,GR [cite: 27]</td></tr>
+                    <tr><td>BIDANG USAHA & DANA [cite: 27]</td><td>MUSLIHUDIN [cite: 27]</td></tr>
+                    <tr><td>BIDANG PENELITIAN & PENGEMBANGAN [cite: 27]</td><td>YULIANA RIPA TANGYONG [cite: 27]</td></tr>
+                    <tr><td>BIDANG KREATIF & KAMPANYE DIGITAL [cite: 27]</td><td>LUCKY FERDIANSAH.ST [cite: 27]</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div id="program" class="tab-content">
+            <h2>PROGRAM & STRATEGI KAMPANYE</h2>
+            
+            <div class="card" style="margin-bottom: 20px;">
+                <h3>PROGRAM KERJA UNGGULAN 2026 [cite: 32]</h3>
+                <ol>
+                    <li><strong>GANN Goes to School:</strong> Roadshow ke Sekolah sekolah di 11 kec. Luwu Timur [cite: 33]</li>
+                    <li><strong>Kampanye (menyesuaikan kondisi) #Jauh Lebih Keren:</strong> Konten TikTok/IG Reels edukatif [cite: 34]</li>
+                    <li>Mengadakan Lomba Cipta Puisi/Poster Anti Narkoba di sekolah [cite: 35]</li>
+                    <li><strong>Volunteer Day Gema Minggu GANN BERSINAR:</strong> Aksi bersih-bersih + sosialisasi ke Kecamatan/desa [cite: 36]</li>
+                </ol>
+            </div>
+
+            <div class="grid">
+                <div class="card">
+                    <h3>TARGET & SASARAN [cite: 37]</h3>
+                    <p><strong>Sasaran:</strong> Siswa SD, SMP-SMA, Mahasiswa, Kamling kec/desa [cite: 38]</p>
+                </div>
+                
+                <div class="card">
+                    <h3>STRATEGI KAMPANYE GANN [cite: 39]</h3>
+                    <ol>
+                        <li><strong>3S:</strong> Senang, Sehat, Sukses tanpa Narkoba [cite: 40]</li>
+                        <li><strong>Pendekatan:</strong> Dari pemuda untuk pemuda, bahasa gaul [cite: 41]</li>
+                        <li><strong>Media:</strong> TikTok, IG, Podcast, Spanduk sekolah [cite: 42]</li>
+                        <li><strong>Kerjasama:</strong> BNN, Dinas Pendidikan, OSIS, Komunitas-komunitas yg ada di Luwu Timur [cite: 43]</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function openTab(evt, tabName) {
+            // Sembunyikan semua konten tab
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+                tabcontent[i].classList.remove("active");
+            }
+
+            // Hapus kelas 'active' dari semua tombol
+            tablinks = document.getElementsByClassName("tab-btn");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active");
+            }
+
+            // Tampilkan tab yang dipilih dan tambahkan kelas 'active' pada tombol
+            document.getElementById(tabName).style.display = "block";
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+    </script>
+</body>
+</html>
